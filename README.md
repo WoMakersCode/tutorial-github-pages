@@ -76,10 +76,10 @@ O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os no
     ![images/githubpages.png](images/githubpages.png)
 
 ---
-:question: Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
 ---
 
-:smiley: Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
+💝 Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
 
 ---
