@@ -1,5 +1,7 @@
 # Publicando no Github Pages
 
+![images/Git-Icon-1788C.png](images/Git-Icon-1788C.png) 
+
 # Introdução
 
 Antes de publicar a sua página no **Github Pages** certifique-se que você tenha uma conta no Github. Se não tiver, [crie uma conta](https://github.com/join).
@@ -18,7 +20,7 @@ Caso já tenha criado seu repositório, é só pular este passo e ir para o pró
     cd sua-pasta
     ```
 
-3. Execute o seguinte comando para criar um arquivo [README.md](http://readme.md) contendo a palavra "teste":
+3. Execute o seguinte comando para criar um arquivo README.md contendo a palavra "teste":
 
     ```bash
     echo "# teste" >> README.md
