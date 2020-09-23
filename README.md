@@ -1,15 +1,15 @@
-# Publicando no Github Pages
+# :octocat: Publicando no Github Pages
 
 ## Introdução
 
 Antes de publicar a sua página no **Github Pages** certifique-se que você tenha uma conta no Github. Se não tiver, [crie uma conta](https://github.com/join).
 
-O WoMakersCode oferece um material gratuito sobre Github caso queira saber mais sobre o assunto: [https://github.com/WoMakersCode/git-e-github](https://github.com/WoMakersCode/git-e-github) 
+> O WoMakersCode oferece um material gratuito sobre Github caso queira saber mais sobre o assunto: [https://github.com/WoMakersCode/git-e-github](https://github.com/WoMakersCode/git-e-github) 
 
 ## Crie um repositório para seu projeto
 
 
-Caso já tenha criado seu repositório, é só pular este passo e ir para o próximo
+Caso já tenha criado seu repositório, é só pular este passo e ir para o próximo.
 
 1. Na página inicial do seu **Github**, no canto superior direito clique no botão "**New**" para criar um novo **repositório** e dê um nome a ele (lembre-se deste nome pois precisará dele mais a frente), mas não crie o arquivo *README.md* ainda;
 2. Abra o terminal e encontre o caminho da pasta do seu projeto;
@@ -58,7 +58,7 @@ Caso já tenha criado seu repositório, é só pular este passo e ir para o pró
 
 9. Com os comandos acima você irá criar o repositório a partir da linha de comando, subindo os arquivos que você criou na sua pasta local.
 
-Nota: onde está escrito **projeto-final.git**, é o nome que você deverá escolher para o repositório do seu projeto final, e pode ser outro, ok? Esta é apenas uma sugestão! 💝 **Este nome será utilizado na URL pública do seu site após a publicação no Github Pages**, portanto é importante usar um nome legal e apresentável, como seu nome e sobreme, por exemplo!
+> Nota: onde está escrito **projeto-final.git**, é o nome que você deverá escolher para o repositório do seu projeto final, e pode ser outro, ok? Esta é apenas uma sugestão! 💝 **Este nome será utilizado na URL pública do seu site após a publicação no Github Pages**, portanto é importante usar um nome legal e apresentável, como seu nome e sobreme, por exemplo!
 
 ## Subindo no Github Pages
 
@@ -76,10 +76,10 @@ O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os no
     ![images/githubpages.png](images/githubpages.png)
 
 ---
-Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+:information_source: Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
 ---
 
-Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
+:copyright: Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
 
 ---
