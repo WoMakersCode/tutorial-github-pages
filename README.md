@@ -1,4 +1,4 @@
-# :octocat: Publicando no Github Pages
+# Publicando no Github Pages
 
 ## Introdução
 
@@ -76,10 +76,10 @@ O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os no
     ![images/githubpages.png](images/githubpages.png)
 
 ---
-:information_source: Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
+:question: Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
 ---
 
-:copyright: Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
+:smiley: Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
 
 ---
