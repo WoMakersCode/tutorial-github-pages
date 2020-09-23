@@ -8,7 +8,6 @@ O WoMakersCode oferece um material gratuito sobre Github caso queira saber mais 
 
 # Crie um repositório para seu projeto
 
----
 
 Caso já tenha criado seu repositório, é só pular este passo e ir para o próximo
 
@@ -63,7 +62,6 @@ Nota: onde está escrito **projeto-final.git**, é o nome que você deverá esco
 
 # Subindo no Github Pages
 
----
 
 O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os nossos projetos hospedados no Github de forma gratuita usando o domínio github.io. Por padrão a URL é o nosso `username.github.io/nome-do-repositório`.
 
@@ -75,8 +73,13 @@ O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os no
 - Depois de salvo o Github irá informar a url da sua página;
 - Teste a URL e verifique se está tudo certo.
 
-    ![Publicando%20no%20Github%20Pages%200d7bab54af0a409a99396aac48bbf6ae/Untitled.png](Publicando%20no%20Github%20Pages%200d7bab54af0a409a99396aac48bbf6ae/Untitled.png)
+    ![images/githubpages.png](images/githubpages.png)
 
+---
 Mais informações na documentação original do Github: [https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages](https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages)
 
+---
+
 Feito com amor por [Aline Bezzoco](https://www.linkedin.com/in/bezzocoaline/) e revisado por [Luanda Pereira](https://www.linkedin.com/in/luandapereira/)
+
+---
