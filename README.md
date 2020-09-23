@@ -1,14 +1,16 @@
 # Publicando no Github Pages
 
-![images/Git-Icon-1788C.png](images/Git-Icon-1788C.png) 
+<div style="text-align: center;">
+    ![icone do git](images/Git-Icon-1788C.png) 
+</div>
 
-# Introdução
+## Introdução
 
 Antes de publicar a sua página no **Github Pages** certifique-se que você tenha uma conta no Github. Se não tiver, [crie uma conta](https://github.com/join).
 
 O WoMakersCode oferece um material gratuito sobre Github caso queira saber mais sobre o assunto: [https://github.com/WoMakersCode/git-e-github](https://github.com/WoMakersCode/git-e-github) 
 
-# Crie um repositório para seu projeto
+## Crie um repositório para seu projeto
 
 
 Caso já tenha criado seu repositório, é só pular este passo e ir para o próximo
@@ -62,7 +64,7 @@ Caso já tenha criado seu repositório, é só pular este passo e ir para o pró
 
 Nota: onde está escrito **projeto-final.git**, é o nome que você deverá escolher para o repositório do seu projeto final, e pode ser outro, ok? Esta é apenas uma sugestão! 💝 **Este nome será utilizado na URL pública do seu site após a publicação no Github Pages**, portanto é importante usar um nome legal e apresentável, como seu nome e sobreme, por exemplo!
 
-# Subindo no Github Pages
+## Subindo no Github Pages
 
 
 O **Github Pages** é uma ferramenta que o Github oferece para publicarmos os nossos projetos hospedados no Github de forma gratuita usando o domínio github.io. Por padrão a URL é o nosso `username.github.io/nome-do-repositório`.
