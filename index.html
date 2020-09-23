@@ -1,0 +1,629 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Publicando no Github Pages</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0fa83bac-32d8-42ca-b531-4f0313c1f08a" class="page sans"><header><img class="page-cover-image" src="https://images.unsplash.com/photo-1590935216109-8d3318de2c1c?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb&amp;ixid=eyJhcHBfaWQiOjYzOTIxfQ" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="images/Git-Icon-1788C.png"/></div><h1 class="page-title">Publicando no Github Pages</h1></header><div class="page-body"><h1 id="3a9fc35a-a01a-41c0-81cc-6bc4afbb627b" class="">Introdução</h1><p id="732e037f-45d9-432a-8076-02ad28da96dc" class="">Antes de publicar a sua página no <strong>Github Pages</strong> certifique-se que você tenha uma conta no Github. Se não tiver, <a href="https://github.com/join">crie uma conta</a>.</p><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="066eadce-f442-4483-a1f0-b7d828d4fe24"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">O WoMakersCode oferece um material gratuito sobre Github caso queira saber mais sobre o assunto: <a href="https://github.com/WoMakersCode/git-e-github">https://github.com/WoMakersCode/git-e-github</a> </div></figure><h1 id="8ff06b80-35ac-4377-acc3-ec5f442bd347" class="">Crie um repositório para seu projeto</h1><hr id="7b124d79-b174-4f8d-84af-b673e180dd5c"/><figure class="block-color-red callout" style="white-space:pre-wrap;display:flex" id="5143c36e-c44f-4d7a-bba1-11eff0a7f848"><div style="font-size:1.5em"><span class="icon">⚠️</span></div><div style="width:100%">Caso já tenha criado seu repositório, é só pular este passo e ir para o próximo</div></figure><ol id="85186ffc-102d-4b85-89ed-6ed2f90d51e1" class="numbered-list" start="1"><li>Na página inicial do seu <strong>Github</strong>, no canto superior direito clique no botão &quot;<strong>New</strong>&quot; para criar um novo <strong>repositório</strong> e dê um nome a ele (lembre-se deste nome pois precisará dele mais a frente), mas não crie o arquivo <em>README.md</em> ainda;</li></ol><ol id="670409d5-6c33-4317-beac-1923c46ee153" class="numbered-list" start="2"><li>Abra o terminal e encontre o caminho da pasta do seu projeto;<pre id="9771a06b-6edc-4964-9576-94bc79489a2e" class="code"><code>cd sua-pasta</code></pre></li></ol><ol id="333223dc-8af5-4e90-8701-71289aa8f1ef" class="numbered-list" start="3"><li>Execute o seguinte comando para criar um arquivo <a href="http://readme.md">README.md</a> contendo a palavra &quot;teste&quot;:<pre id="ae225335-2aaa-47ae-9404-0fd5dee0f506" class="code"><code>echo &quot;# teste&quot; &gt;&gt; README.md</code></pre></li></ol><ol id="7bf01f66-e643-4845-8363-52b761e25037" class="numbered-list" start="4"><li>Execute o seguinte comando para iniciar um repositório de git na pasta do seu projeto:<pre id="af5f98c2-0ac8-4c3e-8d98-f0820f4bdc76" class="code"><code>git init</code></pre></li></ol><ol id="1a21cabc-5897-442c-9a8d-5ebc6bc8ef96" class="numbered-list" start="5"><li>Execute o seguinte comando para adicionar na fila de commit o arquivo README.md:<pre id="20d25ddc-aea5-4c7d-a364-2d7f2eaf01d2" class="code"><code>git add README.md</code></pre></li></ol><ol id="112bb7f5-a49b-45bb-b090-6143775223d3" class="numbered-list" start="6"><li>Execute o seguinte comando para fazer o primeiro commit do seu repositório:<pre id="d0f18379-c039-44dc-98bf-377db8129feb" class="code"><code>git commit -m &quot;primeiro commit&quot;</code></pre></li></ol><ol id="07369d31-9723-4dc8-87f2-f6bd7769d119" class="numbered-list" start="7"><li>Execute o seguinte comando para sincronizar sua pasta local com o repositório que você criou no Github:<pre id="28f6d071-0e26-4b3f-966a-ba7117b9cb6e" class="code"><code>git remote add origin https://github.com/{username}/projeto-final.git</code></pre><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="cf37f109-826b-4376-905b-e032060f9818"><div style="font-size:1.5em"><span class="icon">👉</span></div><div style="width:100%"><em>Esse endereço completo do repositório você pode pegar no Github, na tela seguinte após a criação do mesmo.</em></div></figure></li></ol><ol id="4f333ae7-e500-4d74-8759-7ab9b5f9ee9b" class="numbered-list" start="8"><li>Execute o seguinte comando para fazer o <strong>push </strong>(envio) dos seus arquivos para o repositório<pre id="99daef23-8d0b-4d0d-8556-3df451a8869e" class="code"><code>git push -u origin master</code></pre></li></ol><ol id="29630712-07d8-430c-a757-5f38e02b8d53" class="numbered-list" start="9"><li>Com os comandos acima você irá criar o repositório a partir da linha de comando, subindo os arquivos que você criou na sua pasta local.</li></ol><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="7757515e-97f6-483b-881a-1c7e0979b50f"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Nota: onde está escrito <strong>projeto-final.git</strong>, é o nome que você deverá escolher para o repositório do seu projeto final, e pode ser outro, ok? Esta é apenas uma sugestão! 💝 <strong>Este nome será utilizado na URL pública do seu site após a publicação no Github Pages</strong>, portanto é importante usar um nome legal e apresentável, como seu nome e sobreme, por exemplo!</div></figure><h1 id="8fd04379-2312-4473-8f85-12fbb46340c2" class="">Subindo no Github Pages</h1><hr id="7068a29b-1252-4653-bc6d-0c28e96e7522"/><p id="98567e49-c22c-4543-b45e-57b90a23ac7c" class="">O <strong>Github Pages</strong> é uma ferramenta que o Github oferece para publicarmos os nossos projetos hospedados no Github de forma gratuita usando o domínio github.io. Por padrão a URL é o nosso <code>username.github.io/nome-do-repositório</code>.</p><p id="e855bbed-787b-4c5a-ab02-350fe4337769" class=""><strong>Para publicar o seu projeto por lá basta seguir esses seguintes passos:</strong></p><ul id="abd9e981-bdc8-4a86-acf5-518c3d25b1d0" class="bulleted-list"><li>Dentro do seu repositório vá em &quot;Settings&quot;;</li></ul><ul id="981277f2-fbbd-4470-9b5d-d589099eb8c0" class="bulleted-list"><li>Procure por &quot;<strong>Github Pages</strong>&quot;;</li></ul><ul id="f84dfd34-b9c0-4f4f-905e-bb256e1ced84" class="bulleted-list"><li>Em &quot;Source&quot; selecione a opção para puxar os arquivos da branch master;</li></ul><ul id="7cb0f7b7-336a-4818-acc6-a664e6e5ee9d" class="bulleted-list"><li>Depois de salvo o Github irá informar a url da sua página;</li></ul><ul id="1ce27fcb-6941-42aa-afc3-e477ba9a99ee" class="bulleted-list"><li>Teste a URL e verifique se está tudo certo.<figure id="0d7bab54-af0a-409a-9939-6aac48bbf6ae" class="image"><a href="images/Untitled.png"><img style="width:697px" src="images/Untitled.png"/></a></figure></li></ul><p id="edf40e3d-dae6-42e8-b2db-5c813044601b" class="">
+</p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="807a3b62-1708-42dd-8f50-dfecf2894356"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Mais informações na documentação original do Github: <a href="https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages">https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages</a></div></figure><figure class="block-color-pink_background callout" style="white-space:pre-wrap;display:flex" id="ed8e6b4e-8d53-41da-8014-bb8e0ddd512c"><div style="font-size:1.5em"><span class="icon">©️</span></div><div style="width:100%">Feito com amor por <a href="https://www.linkedin.com/in/bezzocoaline/">Aline Bezzoco</a> e revisado por <a href="https://www.linkedin.com/in/luandapereira/">Luanda Pereira</a></div></figure><p id="7391952f-568e-4fec-abf3-dcbd237a1fef" class="">
+</p></div></article></body></html>
