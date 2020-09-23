@@ -1,9 +1,5 @@
 # Publicando no Github Pages
 
-<div style="text-align: center;">
-    ![icone do git](images/Git-Icon-1788C.png) 
-</div>
-
 ## Introdução
 
 Antes de publicar a sua página no **Github Pages** certifique-se que você tenha uma conta no Github. Se não tiver, [crie uma conta](https://github.com/join).
